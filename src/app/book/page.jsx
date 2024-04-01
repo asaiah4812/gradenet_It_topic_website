@@ -1,6 +1,7 @@
 import React from 'react'
 import books  from '@/lib/books.json'
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Books = () => {
   return (
@@ -9,7 +10,7 @@ const Books = () => {
       <div className="grid-cols-2 grid md:grid-cols-5 gap-8">
         {books ? (
           books.map((book) => (
-            <div key={book.isbn} className='border bg-slate-200 rounded-md p-2 hover:shadow-md hover:bg-slate-300 ease-in'>
+            <Link key={book.isbn} href={`book/${book.isbn}/`} className='border bg-slate-200 rounded-md p-2 hover:shadow-md hover:bg-slate-300 ease-in'>
               <Image
                 src={book.thumbnailUrl}
                 width={200}
@@ -21,7 +22,7 @@ const Books = () => {
               <h2 className="font-bold">{book.title}</h2>
               <small>{book.author}</small>
               <i>{book.status}</i>
-            </div>
+            </Link>
           ))
         ) : (
           <>Loading...</>

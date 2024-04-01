@@ -533,7 +533,7 @@ const Courses = [
   },
   {
     id: 11,
-    title: "Machine Learning",
+    title: "6Machine Learning",
     course: ""
   },
 ];

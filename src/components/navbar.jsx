@@ -11,7 +11,7 @@ export const Navbar = () => {
         IT topic
       </Link>
       <div className="bg-slate-200 p-2 rounded-full hover:shadow-lg">
-        <Link href="book/">
+        <Link href="/book/">
         <LibraryBig />
         </Link>
       </div>
