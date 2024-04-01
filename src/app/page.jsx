@@ -49,7 +49,7 @@ export default function Home() {
       <div className="flex h-full w-full">
         <div className="hidden md:flex md:flex-col w-[25%] h-full border-r-2">
           <h2 className="font-bold border-b">Category</h2>
-          <ul className="flex flex-col gap-3 font-sans text-lg mt-6">
+          <ul className="flex flex-col gap-5 font-sans text-lg mt-6">
             {Courses ? (
               Courses.map((data) => (
                 <Link
@@ -70,13 +70,13 @@ export default function Home() {
           <h1 className="text-xl font-bold border-b-4 md:text-3xl">
             Gradenet Student IT Topics
           </h1>
-          <div className="">
+          <div className="mt-6">
             {Courses &&
               Courses.map((cou) => (
                 <Link key={cou.id} href={"/"}>
                   {cou.course &&
                     cou.course.map((data, i) => (
-                      <p className="flex flex-col" key={cou.id}>
+                      <p className="flex flex-col gap-4" key={cou.id}>
                         {data.content &&
                           data.content.map((dat, i) => (
                             <span key={cou.id}>{dat.name}</span>
